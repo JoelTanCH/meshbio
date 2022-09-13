@@ -18,11 +18,12 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    #path('index/', include("main.urls")),
     #if we dont type anything for path, automatically 
     #direct to main.urls file 
-    path('', include("main.urls")),
+    path('home/', include("main.urls")),
     #given /joel as endpoint, direct to main.urls
     #file and then goes to the appropriate view with 
     #name = joel 
-    path('joel/', include("main.urls")),
+    #path('joel/', include("main.urls")),
 ]
